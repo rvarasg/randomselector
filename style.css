@@ -14,7 +14,7 @@ body, html {
     position: relative;
     background-size: cover;
     background-position: center;
-    animation: change 0.5s infinite ease-in-out;
+    animation: change 0.05s infinite ease-in-out;
 }
 
 /* Dynamically generated keyframes */
