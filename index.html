@@ -38,21 +38,23 @@
         let index = 0;
         const section = document.querySelector('.Section_top');
 
+        // Function to immediately switch to the next poster
         function nextPoster() {
             section.style.backgroundImage = `url(${posters[index]})`;
             index = (index + 1) % posters.length;
         }
 
         // Change every 0.2 seconds
-        setInterval(nextPoster, 200);
+        setInterval(nextPoster, 300);
 
-        // Click to open current image
+        // Click to open a RANDOM poster
         section.addEventListener('click', () => {
-            const currentImage = posters[(index - 1 + posters.length) % posters.length];
-            window.open(currentImage, '_blank');
+            const randomIndex = Math.floor(Math.random() * posters.length);
+            window.open(posters[randomIndex], '_blank');
         });
     </script>
 </body>
 </html>
+
 
 
