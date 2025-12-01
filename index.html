@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Movie Posters</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,6 +15,48 @@
             <h1>PULSA SI ERES GAY</h1>
         </div>
     </div> 
+
+    <script>
+        // List of movie poster images
+        const posters = [
+            'images/the_half_of_it.jpg',
+            'images/elisa_and_marcela.jpg',
+            'images/but_im_a_cheerleader.jpg',
+            'images/hearts_beat_loud.jpg',
+            'images/am_i_ok.jpg',
+            'images/mosquita_y_mari.jpg',
+            'images/signature_move.jpg',
+            'images/guardando_las_apariencias.jpg',
+            'images/bodies_bodies_bodies.jpg',
+            'images/stud_life.jpg',
+            'images/i_cant_think_straight.jpg',
+            'images/ammonite.jpg',
+            'images/imagine_me_and_you.jpg',
+            'images/desert_hearts.jpg',
+            'images/tell_it_to_the_bees.jpg',
+            'images/princess_cyd.jpg',
+            'images/pariah.jpg',
+            'images/looking_for_her.jpg',
+            'images/rafiki.jpg',
+            'images/feliz_novedad.jpg',
+            'images/duck_butter.jpg',
+            'images/drive_away_dolls.jpg'
+        ];
+
+        let current = 0;
+        const section = document.querySelector('.Section_top');
+
+        function nextPoster() {
+            section.style.backgroundImage = `url(${posters[current]})`;
+            current = (current + 1) % posters.length;
+        }
+
+        // Show the first poster immediately
+        nextPoster();
+
+        // Cycle posters every 5 seconds
+        setInterval(nextPoster, 5000);
+    </script>
 </body>
 
 </html>
