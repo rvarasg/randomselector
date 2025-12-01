@@ -9,7 +9,7 @@
 <body>
     <div class="Section_top">
         <div class="content">
-            <h1>PULSA SI ERES GAY</h1>
+            PULSA SI ERES GAY
         </div>
     </div>
 
@@ -42,13 +42,22 @@
         let index = 0;
         const section = document.querySelector('.Section_top');
 
+        // Function to immediately switch to the next poster
         function nextPoster() {
             section.style.backgroundImage = `url(${posters[index]})`;
             index = (index + 1) % posters.length;
         }
 
-        nextPoster(); // initial image
-        setInterval(nextPoster, 500); // change every 5 seconds
+        // Change every 0.2 seconds
+        setInterval(nextPoster, 200);
+
+        // Click handler to open the current image in a pop-up
+        section.addEventListener('click', () => {
+            // index has already moved to next, so we use previous image
+            const currentImage = posters[(index - 1 + posters.length) % posters.length];
+            window.open(currentImage, '_blank');
+        });
     </script>
 </body>
 </html>
+
