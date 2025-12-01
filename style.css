@@ -1,50 +1,57 @@
-body,html{
+body, html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
     font-family: sans-serif;
+    background: #000; /* black background for borders */
 }
-.Section_top{
+
+.Section_top {
     width: 100%;
     height: 100%;
     overflow: hidden;
     position: relative;
-    background-image: url(images/image.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain; /* ensures full height, keeps aspect ratio */
     text-align: center;
     justify-content: center;
-    animation: change 10s infinite ease-in-out;
+    transition: background-image 1s ease-in-out;
 }
-.content{
+
+.content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
-
+    z-index: 2; /* ensure text is above the poster */
 }
-.content h1{
+
+.content h1 {
     color: #fff;
     font-size: 60px;
     letter-spacing: 15px;
 }
-.content h1 span{
+
+.content h1 span {
     color: #111;
 }
-.content a{
+
+.content a {
     background: #85c1ee;
     padding: 10px 24px;
     text-decoration: none;
     font-size: 18px;
     border-radius: 20px;
 }
-.content a:hover{
+
+.content a:hover {
     background: #034e88;
     color: #fff;
 }
+
 @keyframes change{
     0.0%{background-image: url(images/the_half_of_it.jpg);}
     4.761904761904762%{background-image: url(images/elisa_and_marcela.jpg);}
