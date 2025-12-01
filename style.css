@@ -4,7 +4,7 @@ body, html {
     width: 100%;
     height: 100vh;
     font-family: sans-serif;
-    background: #000; /* black background for borders */
+    background: #000; /* black background for side borders */
 }
 
 .Section_top {
@@ -14,7 +14,7 @@ body, html {
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain; /* ensures full height, keeps aspect ratio */
+    background-size: contain; /* fit full height, maintain aspect ratio */
     text-align: center;
     justify-content: center;
     transition: background-image 1s ease-in-out;
@@ -26,7 +26,7 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
-    z-index: 2; /* ensure text is above the poster */
+    z-index: 2; /* ensures content is above poster */
 }
 
 .content h1 {
@@ -52,28 +52,3 @@ body, html {
     color: #fff;
 }
 
-@keyframes change{
-    0.0%{background-image: url(images/the_half_of_it.jpg);}
-    4.761904761904762%{background-image: url(images/elisa_and_marcela.jpg);}
-    9.523809523809524%{background-image: url(images/but_im_a_cheerleader.jpg);}
-    14.285714285714286%{background-image: url(images/hearts_beat_loud.jpg);}
-    19.047619047619047%{background-image: url(images/am_i_ok.jpg);}
-    23.80952380952381%{background-image: url(images/mosquita_y_mari.jpg);}
-    28.571428571428573%{background-image: url(images/signature_move.jpg);}
-    33.333333333333336%{background-image: url(images/guardando_las_apariencias.jpg);}
-    38.095238095238095%{background-image: url(images/bodies_bodies_bodies.jpg);}
-    42.857142857142854%{background-image: url(images/stud_life.jpg);}
-    47.61904761904762%{background-image: url(images/i_cant_think_straight.jpg);}
-    52.38095238095238%{background-image: url(images/ammonite.jpg);}
-    57.142857142857146%{background-image: url(images/imagine_me_and_you.jpg);}
-    61.904761904761905%{background-image: url(images/desert_hearts.jpg);}
-    66.66666666666667%{background-image: url(images/tell_it_to_the_bees.jpg);}
-    71.42857142857143%{background-image: url(images/princess_cyd.jpg);}
-    76.19047619047619%{background-image: url(images/pariah.jpg);}
-    80.95238095238095%{background-image: url(images/looking_for_her.jpg);}
-    85.71428571428571%{background-image: url(images/rafiki.jpg);}
-    90.47619047619048%{background-image: url(images/feliz_novedad.jpg);}
-    95.23809523809524%{background-image: url(images/duck_butter.jpg);}
-    100.0%{background-image: url(images/drive_away_dolls.jpg);}
-
-}
